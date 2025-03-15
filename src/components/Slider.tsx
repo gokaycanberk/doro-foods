@@ -9,6 +9,7 @@ const slides = [
     textColor: "#ffffff",
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
+    alignLeft: false,
   },
   {
     image: "/images/as1.jpeg",
@@ -18,6 +19,7 @@ const slides = [
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
+    alignLeft: false, // BU SLIDER SOLDA OLACAK
   },
   {
     image:
@@ -28,17 +30,19 @@ const slides = [
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
+    alignLeft: true,
   },
-  //   {
-  //     image:
-  //       "https://naturesgarden.net/cdn/shop/files/Fruitful_snacking_without_the_bad_stuff.webp?v=1733835033",
-  //     title: "FRUITFUL SNACKING WITHOUT THE BAD STUFF",
-  //     description: "NATURE’S GARDEN FRUICHIAS",
-  //     link: "https://naturesgarden.net/products/probiotic-fruchias",
-  //     textColor: "#ffffff",
-  //     buttonColor: "#3f4d20",
-  //     buttonBg: "#ffffff",
-  //   },
+  {
+    image:
+      "https://naturesgarden.net/cdn/shop/files/Fruitful_snacking_without_the_bad_stuff.webp?v=1733835033",
+    title: "FRUITFUL SNACKING WITHOUT THE BAD STUFF",
+    description: "NATURE’S GARDEN FRUICHIAS",
+    link: "https://naturesgarden.net/products/probiotic-fruchias",
+    textColor: "#ffffff",
+    buttonColor: "#3f4d20",
+    buttonBg: "#ffffff",
+    alignLeft: false, // BU SLIDER SOLDA OLACAK
+  },
   {
     image:
       "https://naturesgarden.net/cdn/shop/files/FRESH_POWERED_BY_PLANTS_41badb9a-8bee-4ffd-89b1-8c5b774deba2.webp?v=1737795749",
@@ -48,6 +52,7 @@ const slides = [
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
+    alignLeft: true, // BU SLIDER SOLDA OLACAK
   },
   {
     image:
@@ -58,6 +63,7 @@ const slides = [
     textColor: "#563788",
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
+    alignLeft: false,
   },
 ];
 
@@ -67,7 +73,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 5000);
+    }, 60000);
     return () => clearInterval(interval);
   }, []);
 
@@ -82,14 +88,23 @@ const Slider = () => {
           }`}
           style={{ backgroundImage: `url(${slide.image})` }}
         >
-          <div className="w-full h-full flex flex-col justify-center items-center text-center">
+          <div
+            className={`w-full h-full flex flex-col justify-center px-10 ${
+              slide.alignLeft
+                ? "items-start text-left"
+                : "items-center text-center"
+            }`}
+          >
             <h2
               style={{ color: slide.textColor }}
-              className="text-5xl font-bold"
+              className="text-5xl font-bold max-w-[80%]"
             >
               {slide.title}
             </h2>
-            <p style={{ color: slide.textColor }} className="text-xl">
+            <p
+              style={{ color: slide.textColor }}
+              className="text-xl max-w-[80%]"
+            >
               {slide.description}
             </p>
             <a

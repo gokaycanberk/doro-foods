@@ -5,7 +5,7 @@ const Header = () => {
     <header className="bg-white shadow-md px-6 py-0 flex justify-between items-center">
       {/* Logo */}
       <div>
-        <img src="/images/DORO-01.png" alt="Doro Foods Logo" className="h-20" />
+        <img src="/images/DORO-01.png" alt="Doro Foods Logo" className="h-18" />
       </div>
 
       {/* Menü */}
