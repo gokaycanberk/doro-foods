@@ -2,24 +2,33 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="bg-white shadow-md p-4 flex justify-between items-center">
+    <header className="bg-white shadow-md px-6 py-0 flex justify-between items-center">
       {/* Logo */}
-      <h1 className="text-xl font-bold">Doro Foods</h1>
+      <div>
+        <img src="/images/DORO-01.png" alt="Doro Foods Logo" className="h-20" />
+      </div>
 
       {/* Menü */}
-      <nav className="hidden md:flex space-x-4">
-        <Link to="/" className="text-gray-700 hover:text-gray-900">
+      <nav className="hidden md:flex space-x-8">
+        <Link
+          to="/"
+          className="text-lg font-medium text-gray-700 hover:text-gray-900"
+        >
           Home
         </Link>
-        <Link to="/about" className="text-gray-700 hover:text-gray-900">
+        <Link
+          to="/about"
+          className="text-lg font-medium text-gray-700 hover:text-gray-900"
+        >
           About
         </Link>
-        <Link to="/contact" className="text-gray-700 hover:text-gray-900">
+        <Link
+          to="/contact"
+          className="text-lg font-medium text-gray-700 hover:text-gray-900"
+        >
           Contact
         </Link>
       </nav>
-
-      {/* Mobil Menü (İleride Eklenecek) */}
     </header>
   );
 };

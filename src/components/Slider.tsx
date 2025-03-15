@@ -2,6 +2,24 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
+    image: "/images/as.jpeg",
+    title: "Roasted Mix",
+    description: "NATURE HEALTHY PRODUCTS",
+    link: "https://naturesgarden.net/collections/trail-mixes",
+    textColor: "#ffffff",
+    buttonColor: "#ffffff",
+    buttonBg: "#34201a",
+  },
+  {
+    image: "/images/as1.jpeg",
+    title: "Dried Fruits",
+    description: "NATURE HEALTHY PRODUCTS",
+    link: "https://naturesgarden.net/collections/trail-mixes",
+    textColor: "#2a3610",
+    buttonColor: "#ffffff",
+    buttonBg: "#34201a",
+  },
+  {
     image:
       "https://naturesgarden.net/cdn/shop/files/FIND_THE_PERFECT_SNACK_FOR_YOU_natures_garden.webp?v=1737795833",
     title: "FIND THE PERFECT SNACK FOR YOU",
@@ -11,16 +29,16 @@ const slides = [
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
   },
-  {
-    image:
-      "https://naturesgarden.net/cdn/shop/files/Fruitful_snacking_without_the_bad_stuff.webp?v=1733835033",
-    title: "FRUITFUL SNACKING WITHOUT THE BAD STUFF",
-    description: "NATURE’S GARDEN FRUICHIAS",
-    link: "https://naturesgarden.net/products/probiotic-fruchias",
-    textColor: "#ffffff",
-    buttonColor: "#3f4d20",
-    buttonBg: "#ffffff",
-  },
+  //   {
+  //     image:
+  //       "https://naturesgarden.net/cdn/shop/files/Fruitful_snacking_without_the_bad_stuff.webp?v=1733835033",
+  //     title: "FRUITFUL SNACKING WITHOUT THE BAD STUFF",
+  //     description: "NATURE’S GARDEN FRUICHIAS",
+  //     link: "https://naturesgarden.net/products/probiotic-fruchias",
+  //     textColor: "#ffffff",
+  //     buttonColor: "#3f4d20",
+  //     buttonBg: "#ffffff",
+  //   },
   {
     image:
       "https://naturesgarden.net/cdn/shop/files/FRESH_POWERED_BY_PLANTS_41badb9a-8bee-4ffd-89b1-8c5b774deba2.webp?v=1737795749",
