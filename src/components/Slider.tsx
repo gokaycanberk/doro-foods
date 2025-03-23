@@ -10,6 +10,7 @@ const slides = [
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
     alignLeft: false,
+    buttonText: "EXPLORE NOW",
   },
   {
     image: "/images/as1.jpeg",
@@ -19,7 +20,8 @@ const slides = [
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
-    alignLeft: false, // BU SLIDER SOLDA OLACAK
+    alignLeft: false,
+    buttonText: "LEARN MORE",
   },
   {
     image:
@@ -31,6 +33,7 @@ const slides = [
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
     alignLeft: true,
+    buttonText: "EXPLORE NOW",
   },
   {
     image:
@@ -41,7 +44,8 @@ const slides = [
     textColor: "#ffffff",
     buttonColor: "#3f4d20",
     buttonBg: "#ffffff",
-    alignLeft: false, // BU SLIDER SOLDA OLACAK
+    alignLeft: false,
+    buttonText: "LEARN MORE",
   },
   {
     image:
@@ -52,7 +56,8 @@ const slides = [
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
-    alignLeft: true, // BU SLIDER SOLDA OLACAK
+    alignLeft: true,
+    buttonText: "EXPLORE NOW",
   },
   {
     image:
@@ -64,6 +69,7 @@ const slides = [
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
     alignLeft: false,
+    buttonText: "LEARN MORE",
   },
 ];
 
@@ -73,7 +79,7 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 60000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -115,7 +121,7 @@ const Slider = () => {
               }}
               className="inline-block px-8 py-3 mt-5 text-lg font-semibold rounded-md"
             >
-              SHOP NOW
+              {slide.buttonText}
             </a>
           </div>
         </div>

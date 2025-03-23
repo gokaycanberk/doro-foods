@@ -173,8 +173,6 @@ const ProductList = () => {
 
   return (
     <section className="container mx-auto px-6 py-10">
-      <h2 className="text-3xl font-bold text-center mb-6">Our Products</h2>
-
       {/* Filtreleme Butonları */}
       <div className="flex justify-center space-x-4 mb-6">
         {categories.map((category) => (

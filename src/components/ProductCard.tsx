@@ -34,10 +34,10 @@ const ProductCard = ({ image, brand, name, category, price }: ProductProps) => {
           )}
         </p>
 
-        {/* Sepete Ekle Butonu */}
+        {/* Sepete Ekle Butonu
         <button className="mt-4 w-full bg-green-700 text-white py-2 rounded-md font-semibold hover:bg-green-800 transition-all">
           ADD TO CART
-        </button>
+        </button> */}
       </div>
     </div>
   );
