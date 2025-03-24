@@ -4,6 +4,8 @@ interface ProductProps {
   name: string;
   category: string;
   price: string;
+  item_code?: string; // gözükmeyecek
+  upc?: string; // gözükmeyecek
 }
 
 const ProductCard = ({ image, brand, name, category, price }: ProductProps) => {
@@ -13,7 +15,7 @@ const ProductCard = ({ image, brand, name, category, price }: ProductProps) => {
       <img
         src={image}
         alt={name}
-        className="w-full h-64 object-cover rounded-md"
+        className="w-full h-64 object-contain rounded-md"
       />
 
       {/* Ürün Bilgileri */}
@@ -34,10 +36,7 @@ const ProductCard = ({ image, brand, name, category, price }: ProductProps) => {
           )}
         </p>
 
-        {/* Sepete Ekle Butonu
-        <button className="mt-4 w-full bg-green-700 text-white py-2 rounded-md font-semibold hover:bg-green-800 transition-all">
-          ADD TO CART
-        </button> */}
+        {/* UPC ve Item Code sadece veri olarak bulunuyor, UI'da gösterilmiyor */}
       </div>
     </div>
   );

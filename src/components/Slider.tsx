@@ -3,73 +3,67 @@ import { useState, useEffect } from "react";
 const slides = [
   {
     image: "/images/as.jpeg",
-    title: "Roasted Mix",
-    description: "NATURE HEALTHY PRODUCTS",
-    link: "https://naturesgarden.net/collections/trail-mixes",
+    title: "Healthy Snacks",
+    description:
+      "A curated mix of wholesome dried fruits and premium snacks for health-conscious consumers.",
+    link: "/products",
     textColor: "#ffffff",
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
     alignLeft: false,
-    buttonText: "EXPLORE NOW",
-  },
-  {
-    image: "/images/as1.jpeg",
-    title: "Dried Fruits",
-    description: "NATURE HEALTHY PRODUCTS",
-    link: "https://naturesgarden.net/collections/trail-mixes",
-    textColor: "#2a3610",
-    buttonColor: "#ffffff",
-    buttonBg: "#34201a",
-    alignLeft: false,
-    buttonText: "LEARN MORE",
+    buttonText: "Explore Products",
   },
   {
     image:
       "https://naturesgarden.net/cdn/shop/files/FIND_THE_PERFECT_SNACK_FOR_YOU_natures_garden.webp?v=1737795833",
-    title: "FIND THE PERFECT SNACK FOR YOU",
-    description: "NATURE’S GARDEN PRODUCTS",
-    link: "https://naturesgarden.net/collections/all",
+    title: "Retail Ready Snack Solutions",
+    description:
+      "We support over 200 retailers with shelf-ready, high-turnover product assortments.",
+    link: "/products",
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
     alignLeft: true,
-    buttonText: "EXPLORE NOW",
+    buttonText: "View Assortments",
   },
   {
     image:
       "https://naturesgarden.net/cdn/shop/files/Fruitful_snacking_without_the_bad_stuff.webp?v=1733835033",
-    title: "FRUITFUL SNACKING WITHOUT THE BAD STUFF",
-    description: "NATURE’S GARDEN FRUICHIAS",
-    link: "https://naturesgarden.net/products/probiotic-fruchias",
+    title: "Fresh, Clean, Consistent",
+    description:
+      "Every item we distribute meets the highest standards for quality and clean ingredients.",
+    link: "/about",
     textColor: "#ffffff",
     buttonColor: "#3f4d20",
     buttonBg: "#ffffff",
     alignLeft: false,
-    buttonText: "LEARN MORE",
+    buttonText: "Our Promise",
   },
   {
     image:
       "https://naturesgarden.net/cdn/shop/files/FRESH_POWERED_BY_PLANTS_41badb9a-8bee-4ffd-89b1-8c5b774deba2.webp?v=1737795749",
-    title: "FRESH, POWERED BY PLANTS",
-    description: "NATURE’S GARDEN TRAIL MIXES",
-    link: "https://naturesgarden.net/collections/trail-mixes",
+    title: "Plant-Based. Purpose-Driven.",
+    description:
+      "Nature snacks, carefully selected for modern shelves and evolving tastes.",
+    link: "/products",
     textColor: "#2a3610",
     buttonColor: "#ffffff",
     buttonBg: "#2a3610",
     alignLeft: true,
-    buttonText: "EXPLORE NOW",
+    buttonText: "Explore Lineup",
   },
   {
     image:
       "https://naturesgarden.net/cdn/shop/files/FUNCTIONAL_DELICIOUSNESS_bdba50bf-b348-46e6-850d-0e2bce187d8c.jpg?v=1737795564",
-    title: "FUNCTIONAL DELICIOUSNESS",
-    description: "NATURE’S GARDEN PROBIOTIC YOGGIES",
-    link: "https://naturesgarden.net/products/probiotic-strawberry-yoggies-yogurt-covered-fruit-bites?_pos=1&_psq=strawberry+yoggies&_ss=e&_v=1.0",
+    title: "Beyond Distribution",
+    description:
+      "We consult, recommend, and deliver—empowering stores to meet changing consumer needs.",
+    link: "/about",
     textColor: "#563788",
     buttonColor: "#ffffff",
     buttonBg: "#34201a",
     alignLeft: false,
-    buttonText: "LEARN MORE",
+    buttonText: "Partner With Us",
   },
 ];
 
@@ -79,13 +73,12 @@ const Slider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000);
+    }, 8000);
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div className="relative w-full h-[700px] overflow-hidden">
-      {/* SLIDER GÖRSELLERİ */}
       {slides.map((slide, index) => (
         <div
           key={index}
@@ -103,13 +96,13 @@ const Slider = () => {
           >
             <h2
               style={{ color: slide.textColor }}
-              className="text-5xl font-bold max-w-[80%]"
+              className="text-5xl font-bold max-w-[80%] uppercase"
             >
               {slide.title}
             </h2>
             <p
               style={{ color: slide.textColor }}
-              className="text-xl max-w-[80%]"
+              className="text-xl max-w-[80%] mt-4"
             >
               {slide.description}
             </p>
@@ -127,7 +120,7 @@ const Slider = () => {
         </div>
       ))}
 
-      {/* SOL & SAĞ BUTONLAR */}
+      {/* Navigation Buttons */}
       <button
         className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full"
         onClick={() =>
@@ -145,12 +138,12 @@ const Slider = () => {
         ❯
       </button>
 
-      {/* ALTTAKİ NOKTALAR */}
+      {/* Dots */}
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {slides.map((_, index) => (
           <div
             key={index}
-            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+            className={`w-4 h-4 rounded-full transition-all duration-300 cursor-pointer ${
               currentIndex === index ? "bg-white scale-110" : "bg-gray-400"
             }`}
             onClick={() => setCurrentIndex(index)}
