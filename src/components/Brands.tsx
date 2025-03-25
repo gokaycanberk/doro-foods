@@ -1,7 +1,7 @@
 const brandLogos = [
   "/images/brands/amz.jpg",
   "/images/brands/bnm.jpeg",
-  "/images/brands/brv.jpg",
+  "/images/brands/bravos.png",
   "/images/brands/ca.jpeg",
   "/images/brands/cm.png",
   "/images/brands/Costco.jpg",
@@ -13,6 +13,7 @@ const brandLogos = [
   "/images/brands/gf.png",
   "/images/brands/gm.jpeg",
   "/images/brands/ideal.png",
+  "/images/brands/instacart.jpeg",
   "/images/brands/kf.png",
   "/images/brands/mk.png",
   "/images/brands/sf.jpeg",
@@ -29,8 +30,8 @@ const Brands = () => {
         <h2 className="text-center text-2xl font-semibold text-gray-700 mb-2">
           Trusted by Leading Retailers
         </h2>
-        <p className="text-center text-gray-500 text-sm max-w-2xl mx-auto mb-20">
-          Supplying over 200 supermarkets with reliability, speed, and care.
+        <p className="text-center text-gray-500 text-m max-w-2xl mx-auto mb-20">
+          We supply more than 100 supermarkets with reliability, speed and care.
         </p>
 
         {/* Brand Logos */}

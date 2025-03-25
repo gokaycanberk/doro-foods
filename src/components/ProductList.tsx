@@ -339,7 +339,7 @@ const allProducts = [
     name: "Mixed Berry Yoggies 7 x 0.7oz",
     brand: "NATURE’S GARDEN",
     category: "YOGGIES",
-    image: "/images/products/mixedberryyoggies.png",
+    image: "/images/products/mixedberryoggies.png",
     price: "$4.00",
     upc: "846548080612",
     item_code: "8536",
@@ -525,11 +525,13 @@ const allProducts = [
 
 const categories = [
   "ALL",
-  "MIXES",
-  "MULTIPACK",
   "DRIED FRUITS",
+  "MIXES",
+  "YOGGIES",
   "PRETZELS",
   "CHOCOLATE COVERED",
+  "MULTIPACK",
+  "SINGLE SERVE",
   "BULK",
 ];
 
