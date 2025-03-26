@@ -1,9 +1,20 @@
 import ProductCard from "./ProductCard";
 import { useState } from "react";
 
-const allProducts = [
-  // Nature’s Garden Ürünleri
+interface Product {
+  name: string;
+  brand: string;
+  category: string;
+  image: string;
+  price: string;
+  upc: string;
+  item_code: string;
+  size: string;
+  case_pack: number;
+  case_price: string;
+}
 
+const allProducts = [
   {
     name: "Apricots - Probiotic",
     brand: "NATURE’S GARDEN",
@@ -12,6 +23,9 @@ const allProducts = [
     price: "$3.75",
     upc: "846548089073",
     item_code: "8907",
+    size: "12 oz",
+    case_pack: 6,
+    case_price: "$22.50",
   },
   {
     name: "Prunes - Probiotic",
@@ -21,6 +35,9 @@ const allProducts = [
     price: "$3.75",
     upc: "846548089080",
     item_code: "8908",
+    size: "12 oz",
+    case_pack: 6,
+    case_price: "$22.50",
   },
   {
     name: "Dates - Probiotic",
@@ -30,6 +47,9 @@ const allProducts = [
     price: "$3.75",
     upc: "846548089264",
     item_code: "8926",
+    size: "12 oz",
+    case_pack: 6,
+    case_price: "$22.50",
   },
   {
     name: "Raisins - Probiotic",
@@ -39,6 +59,9 @@ const allProducts = [
     price: "$3.75",
     upc: "846548089059",
     item_code: "8905",
+    size: "12 oz",
+    case_pack: 6,
+    case_price: "$22.50",
   },
   {
     name: "Cranberries - Probiotic",
@@ -48,9 +71,12 @@ const allProducts = [
     price: "$3.75",
     upc: "846548089066",
     item_code: "8906",
+    size: "12 oz",
+    case_pack: 6,
+    case_price: "$22.50",
   },
 
-  // mixes
+  // MIXES
   {
     name: "Keto Deluxe Mix - Probiotic",
     brand: "NATURE’S GARDEN",
@@ -59,6 +85,9 @@ const allProducts = [
     price: "$4.50",
     upc: "846548088595",
     item_code: "8859",
+    size: "8 oz",
+    case_pack: 6,
+    case_price: "$27.00",
   },
   {
     name: "Keto Coconut Mix - Probiotic",
@@ -68,6 +97,9 @@ const allProducts = [
     price: "$4.50",
     upc: "846548088656",
     item_code: "8865",
+    size: "8 oz",
+    case_pack: 6,
+    case_price: "$27.00",
   },
   {
     name: "Omega-3 Deluxe Mix - Probiotic",
@@ -77,6 +109,9 @@ const allProducts = [
     price: "$4.50",
     upc: "846548088571",
     item_code: "8857",
+    size: "10 oz",
+    case_pack: 6,
+    case_price: "$27.00",
   },
   {
     name: "Omega Power Mix - Probiotic",
@@ -86,6 +121,9 @@ const allProducts = [
     price: "$4.50",
     upc: "846548088557",
     item_code: "8855",
+    size: "10 oz",
+    case_pack: 6,
+    case_price: "$27.00",
   },
   {
     name: "Immune Booster Mix - Probiotic",
@@ -95,6 +133,9 @@ const allProducts = [
     price: "$4.50",
     upc: "846548089042",
     item_code: "8904",
+    size: "10 oz",
+    case_pack: 6,
+    case_price: "$27.00",
   },
   {
     name: "Mega Immune Mix - Probiotic",
@@ -104,10 +145,12 @@ const allProducts = [
     price: "$4.50",
     upc: "846548088663",
     item_code: "8866",
+    size: "10 oz",
+    case_pack: 6,
+    case_price: "$27.00",
   },
 
   //big mixes
-
   {
     name: "Cranberry Health Mix - 22oz",
     brand: "NATURE’S GARDEN",
@@ -116,6 +159,9 @@ const allProducts = [
     price: "$5.35",
     upc: "846548071719",
     item_code: "7171",
+    size: "22 oz",
+    case_pack: 9,
+    case_price: "$48.15",
   },
   {
     name: "Mountain Trail Mix - 22oz",
@@ -125,10 +171,12 @@ const allProducts = [
     price: "$5.35",
     upc: "846548080612",
     item_code: "8061",
+    size: "22 oz",
+    case_pack: 9,
+    case_price: "$48.15",
   },
 
   // pretzels
-
   {
     name: "Pretzels - Milk Chocolate",
     brand: "NATURE’S GARDEN",
@@ -137,6 +185,9 @@ const allProducts = [
     price: "$2.65",
     upc: "846548073928",
     item_code: "7392",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
   {
     name: "Pretzels - Yogurt",
@@ -146,6 +197,9 @@ const allProducts = [
     price: "$2.65",
     upc: "846548072952",
     item_code: "7295",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
   {
     name: "Pretzels - Toffee",
@@ -155,6 +209,9 @@ const allProducts = [
     price: "$2.65",
     upc: "846548073904",
     item_code: "7390",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
   {
     name: "Pretzels - Raspberry",
@@ -164,6 +221,9 @@ const allProducts = [
     price: "$2.65",
     upc: "846548073805",
     item_code: "7380",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
   {
     name: "Pretzels - Blueberry",
@@ -173,6 +233,9 @@ const allProducts = [
     price: "$2.65",
     upc: "846548073799",
     item_code: "7379",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
   {
     name: "Pretzels - Dark Chocolate",
@@ -182,6 +245,9 @@ const allProducts = [
     price: "$2.65",
     upc: "846548072969",
     item_code: "7296",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
   {
     name: "Pretzels - Key Lime",
@@ -191,9 +257,11 @@ const allProducts = [
     price: "$2.65",
     upc: "846548076561",
     item_code: "7656",
+    size: "7 oz",
+    case_pack: 12,
+    case_price: "$31.80",
   },
-
-  //chocolate covered
+  // chocolate covered
   {
     name: "Dark Chocolate Almonds",
     brand: "NATURE’S GARDEN",
@@ -202,6 +270,9 @@ const allProducts = [
     price: "$3.85",
     upc: "846548070569",
     item_code: "7056",
+    size: "6 oz",
+    case_pack: 12,
+    case_price: "$46.20",
   },
   {
     name: "Dark Chocolate Cashews",
@@ -211,6 +282,9 @@ const allProducts = [
     price: "$3.85",
     upc: "846548070576",
     item_code: "7057",
+    size: "6 oz",
+    case_pack: 12,
+    case_price: "$46.20",
   },
   {
     name: "Dark Chocolate Cranberries",
@@ -220,6 +294,9 @@ const allProducts = [
     price: "$3.85",
     upc: "846548070583",
     item_code: "7058",
+    size: "6 oz",
+    case_pack: 12,
+    case_price: "$46.20",
   },
   {
     name: "Dark Chocolate Cherries",
@@ -229,6 +306,9 @@ const allProducts = [
     price: "$3.85",
     upc: "846548070590",
     item_code: "7059",
+    size: "6 oz",
+    case_pack: 12,
+    case_price: "$46.20",
   },
   {
     name: "Dark Chocolate Walnuts",
@@ -238,6 +318,9 @@ const allProducts = [
     price: "$3.85",
     upc: "846548070637",
     item_code: "7063",
+    size: "6 oz",
+    case_pack: 12,
+    case_price: "$46.20",
   },
   {
     name: "Dark Chocolate Pecans",
@@ -247,10 +330,12 @@ const allProducts = [
     price: "$3.85",
     upc: "846548070750",
     item_code: "7075",
+    size: "6 oz",
+    case_pack: 12,
+    case_price: "$46.20",
   },
 
   // multipack
-
   {
     name: "Cranberry Healthy Mix (1.2oz x 7)",
     brand: "NATURE’S GARDEN",
@@ -259,6 +344,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548070248",
     item_code: "70246",
+    size: "8.4 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "Omega-3 Deluxe Mix (1.2oz x 7)",
@@ -268,6 +356,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548070255",
     item_code: "70256",
+    size: "8.4 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "Hearth Healthy Mix (1.2oz x 7)",
@@ -277,6 +368,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548070279",
     item_code: "70276",
+    size: "8.4 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "Choco N Nut Mix (1.2oz x 7)",
@@ -286,6 +380,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548070422",
     item_code: "70426",
+    size: "8.4 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "High Energy Mix (1.2oz x 7)",
@@ -295,6 +392,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548087185",
     item_code: "87186",
+    size: "8.4 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "Berry Nutty Mix (1.2oz x 7)",
@@ -304,6 +404,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548087192",
     item_code: "87196",
+    size: "8.4 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "Keto Snack Mix Multipack (1oz x 5)",
@@ -313,6 +416,9 @@ const allProducts = [
     price: "$3.50",
     upc: "846548087598",
     item_code: "87596",
+    size: "5 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
   {
     name: "Keto Deluxe Mix Multipack (1oz x 5)",
@@ -322,10 +428,10 @@ const allProducts = [
     price: "$3.50",
     upc: "846548087604",
     item_code: "87606",
+    size: "5 oz",
+    case_pack: 6,
+    case_price: "$21.00",
   },
-
-  //yoggies
-
   {
     name: "Strawberry Yoggies 7 x 0.7oz",
     brand: "NATURE’S GARDEN",
@@ -334,6 +440,9 @@ const allProducts = [
     price: "$4.00",
     upc: "846548085358",
     item_code: "8535",
+    size: "4.9 oz",
+    case_pack: 12,
+    case_price: "$48.00",
   },
   {
     name: "Mixed Berry Yoggies 7 x 0.7oz",
@@ -343,125 +452,117 @@ const allProducts = [
     price: "$4.00",
     upc: "846548080612",
     item_code: "8536",
+    size: "4.9 oz",
+    case_pack: 12,
+    case_price: "$48.00",
   },
-
-  //single serve
   {
-    image: "/images/products/singleAlmonds.png",
-    brand: "NATURE’S GARDEN",
     name: "Almonds Raw",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/singleAlmonds.png",
     price: "$0.80",
     upc: "846548070156",
     item_code: "7015",
+    size: "1 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/singlecashew.png",
-    brand: "NATURE’S GARDEN",
     name: "Cashews Roasted Unsalted",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/singlecashew.png",
     price: "$0.80",
     upc: "846548070163",
     item_code: "7016",
+    size: "1 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/singlecranberry.jpg",
-    brand: "NATURE’S GARDEN",
     name: "Cranberry Healthy Mix",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/singlecranberry.jpg",
     price: "$0.80",
     upc: "846548070170",
     item_code: "7017",
+    size: "1.2 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/singleomega3.jpg",
-    brand: "NATURE’S GARDEN",
     name: "Omega-3 Deluxe Mix",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/singleomega3.jpg",
     price: "$0.80",
     upc: "846548070194",
     item_code: "7019",
+    size: "1.2 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/Singleheart.jpg",
-    brand: "NATURE’S GARDEN",
     name: "Hearth Healthy Mix",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/Singleheart.jpg",
     price: "$0.80",
     upc: "846548070200",
     item_code: "7020",
+    size: "1.2 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/singleChoconut.png",
+    name: "Omega 3 Nut Mix",
     brand: "NATURE’S GARDEN",
-    name: "Choco N Nut Mix",
     category: "SINGLE SERVE",
+    image: "/images/products/singleomeganuts.png",
+    price: "$0.80",
+    upc: "846548070217",
+    item_code: "7021",
+    size: "1 oz",
+    case_pack: 20,
+    case_price: "$16.00",
+  },
+  {
+    name: "Choco N Nut Mix",
+    brand: "NATURE’S GARDEN",
+    category: "SINGLE SERVE",
+    image: "/images/products/singleChoconut.png",
     price: "$0.80",
     upc: "846548070415",
     item_code: "7041",
+    size: "1.2 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/singleHigh.png",
-    brand: "NATURE’S GARDEN",
     name: "High Energy Mix",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/singleHigh.png",
     price: "$0.80",
     upc: "846548087161",
     item_code: "8716",
+    size: "1.2 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
   {
-    image: "/images/products/singleBerry.png",
-    brand: "NATURE’S GARDEN",
     name: "Berry Nutty Mix",
+    brand: "NATURE’S GARDEN",
     category: "SINGLE SERVE",
+    image: "/images/products/singleBerry.png",
     price: "$0.80",
     upc: "846548087208",
     item_code: "8720",
-  },
-
-  // Bulk Ürünler
-  {
-    image: "/images/products/dcpretzelbulk.jpg",
-    brand: "NATURE’S GARDEN",
-    name: "Dark Chocolate Pretzels",
-    category: "BULK",
-    price: "$12.99",
-  },
-  {
-    image: "/images/products/driedappricots.jpg",
-    brand: "NATURE’S GARDEN",
-    name: "Dried Apricots",
-    category: "BULK",
-    price: "$8.99",
-    upc: "846548087208",
-    item_code: "8720",
-  },
-  {
-    image: "/images/products/RawAlmonds.jpg",
-    brand: "NATURE’S GARDEN",
-    name: "Raw Almonds",
-    category: "BULK",
-    price: "$10.99",
-    upc: "846548087208",
-    item_code: "8720",
-  },
-  {
-    image: "/images/products/RoastedCashews.jpg",
-    brand: "NATURE’S GARDEN",
-    name: "Roasted Cashews",
-    category: "BULK",
-    price: "$11.99",
-    upc: "846548087208",
-    item_code: "8720",
-  },
-  {
-    image: "/images/products/RoastedMix.jpg",
-    brand: "NATURE’S GARDEN",
-    name: "Roasted Mix",
-    category: "BULK",
-    price: "$13.99",
-    upc: "846548087208",
-    item_code: "8720",
+    size: "1.2 oz",
+    case_pack: 20,
+    case_price: "$16.00",
   },
 
   /* Sunny Fruit Ürünleri
@@ -523,6 +624,7 @@ const allProducts = [
   },*/
 ];
 
+// Kategori tanımları
 const categories = [
   "ALL",
   "DRIED FRUITS",
@@ -532,7 +634,6 @@ const categories = [
   "CHOCOLATE COVERED",
   "MULTIPACK",
   "SINGLE SERVE",
-  "BULK",
 ];
 
 const ProductList = () => {
@@ -545,8 +646,28 @@ const ProductList = () => {
 
   return (
     <section className="container mx-auto px-6 py-10">
-      {/* Filtreleme Butonları */}
-      <div className="flex justify-center space-x-4 mb-6">
+      {/* TUBS & BULK PDF BUTTONS */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <a
+          href="/catalogs/bulk-program.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-black text-white px-5 py-2 rounded-md font-semibold hover:bg-gray-800 transition"
+        >
+          📦 View TUBS Program
+        </a>
+        <a
+          href="/catalogs/tubs-program.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-black text-white px-5 py-2 rounded-md font-semibold hover:bg-gray-800 transition"
+        >
+          🧺 View BULK Program
+        </a>
+      </div>
+
+      {/* Category Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-3 mb-6">
         {categories.map((category) => (
           <button
             key={category}
@@ -562,7 +683,7 @@ const ProductList = () => {
         ))}
       </div>
 
-      {/* Ürünler */}
+      {/* Product Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredProducts.map((product, index) => (
           <ProductCard key={index} {...product} />

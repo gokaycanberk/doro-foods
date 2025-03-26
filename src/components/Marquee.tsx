@@ -1,11 +1,11 @@
+import "./Marquee.css";
+
 const Marquee = () => {
   return (
-    <div className="w-full bg-white overflow-hidden border-y border-gray-200 py-2">
-      <div className="animate-marquee whitespace-nowrap flex gap-8 text-[220px] font-medium text-gray-800 uppercase tracking-wide">
-        <span>
-          Browse our selection of premium quality snacks, nuts, and dried
-          fruits.
-        </span>
+    <div className="marquee-container">
+      <div className="marquee-track text-[240px] font-heading uppercase tracking-tight text-black">
+        <span className="mr-16">Collection of the best natural snacks</span>
+        <span className="mr-16">Collection of the best natural snacks</span>
       </div>
     </div>
   );
