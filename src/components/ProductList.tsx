@@ -637,7 +637,7 @@ const categories = [
 ];
 
 const ProductList = () => {
-  const [selectedView, setSelectedView] = useState("Package");
+  const [selectedView, setSelectedView] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("ALL");
 
   const filteredProducts =
@@ -652,6 +652,93 @@ const ProductList = () => {
     }
   };
 
+  // Ana sayfa görünümü - Kartlar
+  if (!selectedView) {
+    return (
+      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        {/* Kayar Yazı */}
+        <div className="text-center mb-10 sm:mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">
+            EXPLORE FULL COLLECTION
+          </h1>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
+            Browse all our bold and delicious products, ready to fuel your next
+            adventure. Discover your favorite today!
+          </p>
+        </div>
+
+        {/* Program Kartları */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-0">
+          {/* Package Card */}
+          <div
+            onClick={() => handleViewChange("Package")}
+            className="relative group cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl w-full"
+          >
+            <div className="aspect-[3/4] relative">
+              <img
+                src="/images/products/packages.png"
+                alt="Package Products"
+                className="w-full h-full object-cover object-[25%_center] scale-100 transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">
+                  Packaged Products
+                </h2>
+                <p className="text-sm sm:text-base text-white/90">
+                  Best quality snacks in convenient packages
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Tubs Card */}
+          <div
+            onClick={() => handleViewChange("Tubs")}
+            className="relative group cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl w-full"
+          >
+            <div className="aspect-[3/4] relative">
+              <img
+                src="/images/products/tubs.png"
+                alt="Tubs Program"
+                className="w-full h-full object-contain scale-110 transition-transform duration-500 group-hover:scale-120"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">
+                  Tubs Program
+                </h2>
+                <p className="text-sm sm:text-base text-white/90">
+                  Perfect for retail and self-service displays
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bulk Card */}
+          <div
+            onClick={() => handleViewChange("Bulk")}
+            className="relative group cursor-pointer overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl sm:col-span-2 md:col-span-1 w-full"
+          >
+            <div className="aspect-[3/4] relative">
+              <img
+                src="/images/products/bulk.jpeg"
+                alt="Bulk Program"
+                className="w-full h-full object-cover object-[70%_20%] scale-125 transition-transform duration-500 group-hover:scale-130"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">
+                  Bulk Program
+                </h2>
+                <p className="text-sm sm:text-base text-white/90">
+                  Ideal for food service and specialty retailers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   // If Tubs or Bulk is selected, we'll show a PDF catalog
   if (selectedView === "Tubs" || selectedView === "Bulk") {
     const pdfPath =
@@ -659,103 +746,105 @@ const ProductList = () => {
         ? "/catalogs/tubs-program.pdf"
         : "/catalogs/bulk-program.pdf";
 
-    // Görsel kaynaklarını güncelliyoruz
-    const heroImage =
-      selectedView === "Tubs"
-        ? "/images/products/tubs.png"
-        : "/images/products/bulk.jpeg";
-
     return (
-      <section className="container mx-auto px-6 py-10">
-        {/* Main Tab Selector */}
-        <div className="relative flex justify-center mb-12">
-          <div className="relative bg-gray-200 p-1 rounded-full flex w-auto max-w-md mx-auto">
-            {["Package", "Tubs", "Bulk"].map((view) => (
-              <button
-                key={view}
-                onClick={() => handleViewChange(view)}
-                className={`relative py-2 px-6 text-sm font-medium rounded-full transition-all duration-300 ease-in-out ${
-                  selectedView === view
-                    ? "bg-white text-gray-800 shadow-md"
-                    : "bg-transparent text-gray-600 hover:text-gray-800"
-                }`}
-                style={{
-                  minWidth: "100px",
-                  zIndex: selectedView === view ? 10 : 1,
-                }}
-              >
-                {view}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Hero Section */}
-        <div className="relative mb-10 overflow-hidden rounded-xl">
-          <div className="h-64 md:h-80 lg:h-96 w-full">
-            <img
-              src={heroImage}
-              alt={`${selectedView} Program`}
-              className={`w-full h-full ${
-                selectedView === "Tubs"
-                  ? "object-contain"
-                  : "object-cover object-right-top"
-              }`}
+      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        {/* Back Button */}
+        <button
+          onClick={() => setSelectedView("")}
+          className="mb-6 sm:mb-8 flex items-center text-gray-600 hover:text-gray-800 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5 mr-2"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+              clipRule="evenodd"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white p-6">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                {selectedView} Program
-              </h1>
-              <p className="text-lg md:text-xl max-w-2xl text-center">
-                {selectedView === "Tubs"
-                  ? "High-quality snacks in convenient tubs perfect for retail and self-service displays."
-                  : "Premium bulk options ideal for food service, bakeries, and specialty retailers."}
-              </p>
-            </div>
-          </div>
-        </div>
+          </svg>
+          Back to Programs
+        </button>
 
         {/* PDF Viewer Section */}
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-          <div className="bg-gray-100 py-3 px-4 border-b border-gray-200">
-            <h2 className="text-xl font-bold text-gray-800">
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-6 sm:mb-10">
+          <div className="bg-gray-100 py-2 sm:py-3 px-3 sm:px-4 border-b border-gray-200">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-800">
               {selectedView} Program Catalog
             </h2>
           </div>
-          <div className="p-4">
-            <div className="aspect-[8.5/11] w-full h-auto">
-              <iframe
-                src={`${pdfPath}#view=FitH`}
-                className="w-full h-full min-h-[800px] border-0"
-                title={`${selectedView} Program Catalog`}
+
+          {/* PDF önizleme yerine katalog görseli ve indirme seçenekleri */}
+          <div className="p-4 sm:p-6">
+            <div className="flex flex-col items-center">
+              <img
+                src={
+                  selectedView === "Tubs"
+                    ? "/images/products/tubs.png"
+                    : "/images/products/bulk.jpeg"
+                }
+                alt={`${selectedView} Program Preview`}
+                className="w-full max-w-md h-auto mb-6 rounded-lg shadow-md"
               />
+
+              <div className="text-center mb-6">
+                <p className="text-gray-600 mb-4">
+                  {selectedView === "Tubs"
+                    ? "Browse our complete Tubs Program catalog featuring over 250 varieties of high-quality snacks in convenient tubs perfect for retail and self-service displays."
+                    : "Explore our Bulk Program catalog with over 250 premium varieties ideal for food service, bakeries, and specialty retailers."}
+                </p>
+
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
+                  <a
+                    href={pdfPath}
+                    download={`${selectedView.toLowerCase()}-program.pdf`}
+                    className="bg-green-700 hover:bg-green-800 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 sm:h-5 w-4 sm:w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                      />
+                    </svg>
+                    Download Catalog
+                  </a>
+
+                  <a
+                    href={pdfPath}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-green-700 text-green-700 hover:bg-green-50 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 sm:h-5 w-4 sm:w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                    Open in New Tab
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Download Button */}
-        <div className="flex justify-center mb-10">
-          <a
-            href={pdfPath}
-            download={`${selectedView.toLowerCase()}-program.pdf`}
-            className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 mr-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
-            Download {selectedView} Catalog
-          </a>
         </div>
       </section>
     );
@@ -763,59 +852,34 @@ const ProductList = () => {
 
   // Package view with products
   return (
-    <section className="container mx-auto px-6 py-10">
-      {/* Main Tab Selector */}
-      <div className="relative flex justify-center mb-12">
-        <div className="relative bg-gray-200 p-1 rounded-full flex w-auto max-w-md mx-auto">
-          {["Package", "Tubs", "Bulk"].map((view) => (
-            <button
-              key={view}
-              onClick={() => handleViewChange(view)}
-              className={`relative py-2 px-6 text-sm font-medium rounded-full transition-all duration-300 ease-in-out ${
-                selectedView === view
-                  ? "bg-white text-gray-800 shadow-md"
-                  : "bg-transparent text-gray-600 hover:text-gray-800"
-              }`}
-              style={{
-                minWidth: "100px",
-                zIndex: selectedView === view ? 10 : 1,
-              }}
-            >
-              {view}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Hero Section for Package */}
-      <div className="relative mb-10 overflow-hidden rounded-xl">
-        <div className="h-48 md:h-64 lg:h-80 w-full">
-          <img
-            src="/images/products/package.png"
-            alt="Package Products"
-            className="w-full h-full object-cover"
+    <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-10">
+      {/* Back Button */}
+      <button
+        onClick={() => setSelectedView("")}
+        className="mb-6 sm:mb-8 flex items-center text-gray-600 hover:text-gray-800 transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 mr-2"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fillRule="evenodd"
+            d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+            clipRule="evenodd"
           />
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full pl-10 md:pl-16 lg:pl-24">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-gray-800">
-                Packaged Products
-              </h1>
-              <p className="text-base md:text-lg max-w-lg text-gray-800">
-                Explore our selection of premium quality snacks, nuts, and dried
-                fruits
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </svg>
+        Back to Programs
+      </button>
 
       {/* Category Filter Buttons - Only shown for Package view */}
-      <div className="flex flex-wrap justify-center gap-3 mb-6">
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-6">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 font-semibold rounded-md ${
+            className={`px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base font-semibold rounded-md ${
               selectedCategory === category
                 ? "bg-green-700 text-white"
                 : "bg-gray-200 text-gray-700"
@@ -827,7 +891,7 @@ const ProductList = () => {
       </div>
 
       {/* Product Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {filteredProducts.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
