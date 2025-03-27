@@ -768,29 +768,19 @@ const ProductList = () => {
           Back to Programs
         </button>
 
-        {/* PDF Viewer Section */}
+        {/* Minimalist Catalog Section */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-6 sm:mb-10">
-          <div className="bg-gray-100 py-2 sm:py-3 px-3 sm:px-4 border-b border-gray-200">
-            <h2 className="text-lg sm:text-xl font-bold text-gray-800">
+          <div className="bg-gray-100 py-4 sm:py-5 px-5 sm:px-6 border-b border-gray-200">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
               {selectedView} Program Catalog
             </h2>
           </div>
 
-          {/* PDF önizleme yerine katalog görseli ve indirme seçenekleri */}
-          <div className="p-4 sm:p-6">
-            <div className="flex flex-col items-center">
-              <img
-                src={
-                  selectedView === "Tubs"
-                    ? "/images/products/tubs.png"
-                    : "/images/products/bulk.jpeg"
-                }
-                alt={`${selectedView} Program Preview`}
-                className="w-full max-w-md h-auto mb-6 rounded-lg shadow-md"
-              />
-
-              <div className="text-center mb-6">
-                <p className="text-gray-600 mb-4">
+          {/* Minimalist Catalog Content */}
+          <div className="p-8 sm:p-10">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-10">
+                <p className="text-lg text-gray-700 mb-8">
                   {selectedView === "Tubs"
                     ? "Browse our complete Tubs Program catalog featuring over 250 varieties of high-quality snacks in convenient tubs perfect for retail and self-service displays."
                     : "Explore our Bulk Program catalog with over 250 premium varieties ideal for food service, bakeries, and specialty retailers."}
@@ -800,11 +790,11 @@ const ProductList = () => {
                   <a
                     href={pdfPath}
                     download={`${selectedView.toLowerCase()}-program.pdf`}
-                    className="bg-green-700 hover:bg-green-800 text-white px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
+                    className="bg-green-700 hover:bg-green-800 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center text-base"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 sm:h-5 w-4 sm:w-5 mr-2"
+                      className="h-5 w-5 mr-2"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -823,11 +813,11 @@ const ProductList = () => {
                     href={pdfPath}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="border border-green-700 text-green-700 hover:bg-green-50 px-4 sm:px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
+                    className="border border-green-700 text-green-700 hover:bg-green-50 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center text-base"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 sm:h-5 w-4 sm:w-5 mr-2"
+                      className="h-5 w-5 mr-2"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -842,6 +832,38 @@ const ProductList = () => {
                     Open in New Tab
                   </a>
                 </div>
+              </div>
+
+              {/* Additional Information Box */}
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  Contact for More Information
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Interested in our {selectedView.toLowerCase()} program?
+                  Contact our sales team for pricing, availability, and custom
+                  orders.
+                </p>
+                <a
+                  href="/contact"
+                  className="text-green-700 font-medium hover:text-green-800 transition flex items-center"
+                >
+                  <span>Contact Sales Team</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-4 w-4 ml-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
