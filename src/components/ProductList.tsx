@@ -17,7 +17,7 @@ interface Product {
 const allProducts = [
   {
     name: "Apricots - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "DRIED FRUITS",
     image: "/images/products/apricot.jpeg",
     price: "$3.75",
@@ -29,7 +29,7 @@ const allProducts = [
   },
   {
     name: "Prunes - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "DRIED FRUITS",
     image: "/images/products/prunes.jpeg",
     price: "$3.75",
@@ -41,7 +41,7 @@ const allProducts = [
   },
   {
     name: "Dates - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "DRIED FRUITS",
     image: "/images/products/dates.jpeg",
     price: "$3.75",
@@ -53,7 +53,7 @@ const allProducts = [
   },
   {
     name: "Raisins - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "DRIED FRUITS",
     image: "/images/products/Raisins.jpeg",
     price: "$3.75",
@@ -65,7 +65,7 @@ const allProducts = [
   },
   {
     name: "Cranberries - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "DRIED FRUITS",
     image: "/images/products/cranberries.jpeg",
     price: "$3.75",
@@ -79,7 +79,7 @@ const allProducts = [
   // MIXES
   {
     name: "Keto Deluxe Mix - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/ketodeluxe.jpg",
     price: "$4.50",
@@ -91,7 +91,7 @@ const allProducts = [
   },
   {
     name: "Keto Coconut Mix - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/ketochoconutmix.jpeg",
     price: "$4.50",
@@ -103,7 +103,7 @@ const allProducts = [
   },
   {
     name: "Omega-3 Deluxe Mix - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/OMEGA3MultipackX7.png",
     price: "$4.50",
@@ -115,7 +115,7 @@ const allProducts = [
   },
   {
     name: "Omega Power Mix - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/omegapowermix.png",
     price: "$4.50",
@@ -127,7 +127,7 @@ const allProducts = [
   },
   {
     name: "Immune Booster Mix - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/immunebooster.jpg",
     price: "$4.50",
@@ -139,7 +139,7 @@ const allProducts = [
   },
   {
     name: "Mega Immune Mix - Probiotic",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/megaimmunemix.png",
     price: "$4.50",
@@ -153,7 +153,7 @@ const allProducts = [
   //big mixes
   {
     name: "Cranberry Health Mix - 22oz",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/cranberrymix22oz.jpg",
     price: "$5.35",
@@ -165,7 +165,7 @@ const allProducts = [
   },
   {
     name: "Mountain Trail Mix - 22oz",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MIXES",
     image: "/images/products/mountaintrailmix22oz.jpeg",
     price: "$5.35",
@@ -179,7 +179,7 @@ const allProducts = [
   // pretzels
   {
     name: "Pretzels - Milk Chocolate",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/milkchocolatepretzel.jpg",
     price: "$2.65",
@@ -191,7 +191,7 @@ const allProducts = [
   },
   {
     name: "Pretzels - Yogurt",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/yogurtpretzel.jpg",
     price: "$2.65",
@@ -203,7 +203,7 @@ const allProducts = [
   },
   {
     name: "Pretzels - Toffee",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/toffie.jpg",
     price: "$2.65",
@@ -215,7 +215,7 @@ const allProducts = [
   },
   {
     name: "Pretzels - Raspberry",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/rasperrypretzel.jpg",
     price: "$2.65",
@@ -227,7 +227,7 @@ const allProducts = [
   },
   {
     name: "Pretzels - Blueberry",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/blueberrypretzel.jpg",
     price: "$2.65",
@@ -239,7 +239,7 @@ const allProducts = [
   },
   {
     name: "Pretzels - Dark Chocolate",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/darkchocolatepretzel.jpg",
     price: "$2.65",
@@ -251,7 +251,7 @@ const allProducts = [
   },
   {
     name: "Pretzels - Key Lime",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "PRETZELS",
     image: "/images/products/keylimepretzel.jpg",
     price: "$2.65",
@@ -264,7 +264,7 @@ const allProducts = [
   // chocolate covered
   {
     name: "Dark Chocolate Almonds",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "CHOCOLATE COVERED",
     image: "/images/products/dccalmond.jpg",
     price: "$3.85",
@@ -276,7 +276,7 @@ const allProducts = [
   },
   {
     name: "Dark Chocolate Cashews",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "CHOCOLATE COVERED",
     image: "/images/products/dcccashew.jpeg",
     price: "$3.85",
@@ -288,7 +288,7 @@ const allProducts = [
   },
   {
     name: "Dark Chocolate Cranberries",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "CHOCOLATE COVERED",
     image: "/images/products/dcccranberry.jpg",
     price: "$3.85",
@@ -300,7 +300,7 @@ const allProducts = [
   },
   {
     name: "Dark Chocolate Cherries",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "CHOCOLATE COVERED",
     image: "/images/products/dcccheries.jpg",
     price: "$3.85",
@@ -312,7 +312,7 @@ const allProducts = [
   },
   {
     name: "Dark Chocolate Walnuts",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "CHOCOLATE COVERED",
     image: "/images/products/dccsampleimage.jpg",
     price: "$3.85",
@@ -324,7 +324,7 @@ const allProducts = [
   },
   {
     name: "Dark Chocolate Pecans",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "CHOCOLATE COVERED",
     image: "/images/products/dccpecans.jpg",
     price: "$3.85",
@@ -338,7 +338,7 @@ const allProducts = [
   // multipack
   {
     name: "Cranberry Healthy Mix (1.2oz x 7)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/CBHealthX7.jpeg",
     price: "$3.50",
@@ -350,7 +350,7 @@ const allProducts = [
   },
   {
     name: "Omega-3 Deluxe Mix (1.2oz x 7)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/OMEGA3MultipackX7.png",
     price: "$3.50",
@@ -362,7 +362,7 @@ const allProducts = [
   },
   {
     name: "Hearth Healthy Mix (1.2oz x 7)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/hearthelthmixX7.jpg",
     price: "$3.50",
@@ -374,7 +374,7 @@ const allProducts = [
   },
   {
     name: "Choco N Nut Mix (1.2oz x 7)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/choconutX7.png",
     price: "$3.50",
@@ -386,7 +386,7 @@ const allProducts = [
   },
   {
     name: "High Energy Mix (1.2oz x 7)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/highenergyX7.png",
     price: "$3.50",
@@ -398,7 +398,7 @@ const allProducts = [
   },
   {
     name: "Berry Nutty Mix (1.2oz x 7)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/BerrynuttymixX7.jpg",
     price: "$3.50",
@@ -410,7 +410,7 @@ const allProducts = [
   },
   {
     name: "Keto Snack Mix Multipack (1oz x 5)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/ketosnackmix1ozX5.png",
     price: "$3.50",
@@ -422,7 +422,7 @@ const allProducts = [
   },
   {
     name: "Keto Deluxe Mix Multipack (1oz x 5)",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "MULTIPACK",
     image: "/images/products/ketodeluxe1ozX5.png",
     price: "$3.50",
@@ -434,7 +434,7 @@ const allProducts = [
   },
   {
     name: "Strawberry Yoggies 7 x 0.7oz",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "YOGGIES",
     image: "/images/products/strawberryyoggies.png",
     price: "$4.00",
@@ -446,7 +446,7 @@ const allProducts = [
   },
   {
     name: "Mixed Berry Yoggies 7 x 0.7oz",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "YOGGIES",
     image: "/images/products/mixedberryoggies.png",
     price: "$4.00",
@@ -458,7 +458,7 @@ const allProducts = [
   },
   {
     name: "Almonds Raw",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singleAlmonds.png",
     price: "$0.80",
@@ -470,7 +470,7 @@ const allProducts = [
   },
   {
     name: "Cashews Roasted Unsalted",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singlecashew.png",
     price: "$0.80",
@@ -482,7 +482,7 @@ const allProducts = [
   },
   {
     name: "Cranberry Healthy Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singlecranberry.jpg",
     price: "$0.80",
@@ -494,7 +494,7 @@ const allProducts = [
   },
   {
     name: "Omega-3 Deluxe Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singleomega3.jpg",
     price: "$0.80",
@@ -506,7 +506,7 @@ const allProducts = [
   },
   {
     name: "Hearth Healthy Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/Singleheart.jpg",
     price: "$0.80",
@@ -518,7 +518,7 @@ const allProducts = [
   },
   {
     name: "Omega 3 Nut Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singleomeganuts.png",
     price: "$0.80",
@@ -530,7 +530,7 @@ const allProducts = [
   },
   {
     name: "Choco N Nut Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singleChoconut.png",
     price: "$0.80",
@@ -542,7 +542,7 @@ const allProducts = [
   },
   {
     name: "High Energy Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singleHigh.png",
     price: "$0.80",
@@ -554,7 +554,7 @@ const allProducts = [
   },
   {
     name: "Berry Nutty Mix",
-    brand: "NATURE’S GARDEN",
+    brand: "NATURE'S GARDEN",
     category: "SINGLE SERVE",
     image: "/images/products/singleBerry.png",
     price: "$0.80",
@@ -637,6 +637,7 @@ const categories = [
 ];
 
 const ProductList = () => {
+  const [selectedView, setSelectedView] = useState("Package");
   const [selectedCategory, setSelectedCategory] = useState("ALL");
 
   const filteredProducts =
@@ -644,29 +645,171 @@ const ProductList = () => {
       ? allProducts
       : allProducts.filter((product) => product.category === selectedCategory);
 
+  const handleViewChange = (view: string) => {
+    setSelectedView(view);
+    if (view === "Package") {
+      setSelectedCategory("ALL");
+    }
+  };
+
+  // If Tubs or Bulk is selected, we'll show a PDF catalog
+  if (selectedView === "Tubs" || selectedView === "Bulk") {
+    const pdfPath =
+      selectedView === "Tubs"
+        ? "/catalogs/tubs-program.pdf"
+        : "/catalogs/bulk-program.pdf";
+
+    // Görsel kaynaklarını güncelliyoruz
+    const heroImage =
+      selectedView === "Tubs"
+        ? "/images/products/tubs.png"
+        : "/images/products/bulk.jpeg";
+
+    return (
+      <section className="container mx-auto px-6 py-10">
+        {/* Main Tab Selector */}
+        <div className="relative flex justify-center mb-12">
+          <div className="relative bg-gray-200 p-1 rounded-full flex w-auto max-w-md mx-auto">
+            {["Package", "Tubs", "Bulk"].map((view) => (
+              <button
+                key={view}
+                onClick={() => handleViewChange(view)}
+                className={`relative py-2 px-6 text-sm font-medium rounded-full transition-all duration-300 ease-in-out ${
+                  selectedView === view
+                    ? "bg-white text-gray-800 shadow-md"
+                    : "bg-transparent text-gray-600 hover:text-gray-800"
+                }`}
+                style={{
+                  minWidth: "100px",
+                  zIndex: selectedView === view ? 10 : 1,
+                }}
+              >
+                {view}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Hero Section */}
+        <div className="relative mb-10 overflow-hidden rounded-xl">
+          <div className="h-64 md:h-80 lg:h-96 w-full">
+            <img
+              src={heroImage}
+              alt={`${selectedView} Program`}
+              className={`w-full h-full ${
+                selectedView === "Tubs"
+                  ? "object-contain"
+                  : "object-cover object-right-top"
+              }`}
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white p-6">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                {selectedView} Program
+              </h1>
+              <p className="text-lg md:text-xl max-w-2xl text-center">
+                {selectedView === "Tubs"
+                  ? "High-quality snacks in convenient tubs perfect for retail and self-service displays."
+                  : "Premium bulk options ideal for food service, bakeries, and specialty retailers."}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* PDF Viewer Section */}
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+          <div className="bg-gray-100 py-3 px-4 border-b border-gray-200">
+            <h2 className="text-xl font-bold text-gray-800">
+              {selectedView} Program Catalog
+            </h2>
+          </div>
+          <div className="p-4">
+            <div className="aspect-[8.5/11] w-full h-auto">
+              <iframe
+                src={`${pdfPath}#view=FitH`}
+                className="w-full h-full min-h-[800px] border-0"
+                title={`${selectedView} Program Catalog`}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Download Button */}
+        <div className="flex justify-center mb-10">
+          <a
+            href={pdfPath}
+            download={`${selectedView.toLowerCase()}-program.pdf`}
+            className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            Download {selectedView} Catalog
+          </a>
+        </div>
+      </section>
+    );
+  }
+
+  // Package view with products
   return (
     <section className="container mx-auto px-6 py-10">
-      {/* TUBS & BULK PDF BUTTONS */}
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
-        <a
-          href="/catalogs/bulk-program.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-black text-white px-5 py-2 rounded-md font-semibold hover:bg-gray-800 transition"
-        >
-          📦 View TUBS Program
-        </a>
-        <a
-          href="/catalogs/tubs-program.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-black text-white px-5 py-2 rounded-md font-semibold hover:bg-gray-800 transition"
-        >
-          🧺 View BULK Program
-        </a>
+      {/* Main Tab Selector */}
+      <div className="relative flex justify-center mb-12">
+        <div className="relative bg-gray-200 p-1 rounded-full flex w-auto max-w-md mx-auto">
+          {["Package", "Tubs", "Bulk"].map((view) => (
+            <button
+              key={view}
+              onClick={() => handleViewChange(view)}
+              className={`relative py-2 px-6 text-sm font-medium rounded-full transition-all duration-300 ease-in-out ${
+                selectedView === view
+                  ? "bg-white text-gray-800 shadow-md"
+                  : "bg-transparent text-gray-600 hover:text-gray-800"
+              }`}
+              style={{
+                minWidth: "100px",
+                zIndex: selectedView === view ? 10 : 1,
+              }}
+            >
+              {view}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Category Filter Buttons */}
+      {/* Hero Section for Package */}
+      <div className="relative mb-10 overflow-hidden rounded-xl">
+        <div className="h-48 md:h-64 lg:h-80 w-full">
+          <img
+            src="/images/products/package.png"
+            alt="Package Products"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="w-full pl-10 md:pl-16 lg:pl-24">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-gray-800">
+                Packaged Products
+              </h1>
+              <p className="text-base md:text-lg max-w-lg text-gray-800">
+                Explore our selection of premium quality snacks, nuts, and dried
+                fruits
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Category Filter Buttons - Only shown for Package view */}
       <div className="flex flex-wrap justify-center gap-3 mb-6">
         {categories.map((category) => (
           <button
