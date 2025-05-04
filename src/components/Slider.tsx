@@ -2,18 +2,6 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "/images/as.jpeg",
-    title: "Healthy Snacks",
-    description:
-      "A curated mix of wholesome dried fruits and premium snacks for health-conscious consumers.",
-    link: "/products",
-    textColor: "#ffffff",
-    buttonColor: "#ffffff",
-    buttonBg: "#34201a",
-    alignLeft: false,
-    buttonText: "Explore Products",
-  },
-  {
     image:
       "https://naturesgarden.net/cdn/shop/files/FIND_THE_PERFECT_SNACK_FOR_YOU_natures_garden.webp?v=1737795833",
     title: "Retail Ready Snack Solutions",
@@ -25,6 +13,18 @@ const slides = [
     buttonBg: "#2a3610",
     alignLeft: true,
     buttonText: "View Assortments",
+  },
+  {
+    image: "/images/as.jpeg",
+    title: "Healthy Snacks",
+    description:
+      "A curated mix of wholesome dried fruits and premium snacks for health-conscious consumers.",
+    link: "/products",
+    textColor: "#ffffff",
+    buttonColor: "#ffffff",
+    buttonBg: "#34201a",
+    alignLeft: false,
+    buttonText: "Explore Products",
   },
   {
     image:

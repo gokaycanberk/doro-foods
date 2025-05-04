@@ -6,7 +6,7 @@ import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
   const statsRef = useRef(null);
   const [counters, setCounters] = useState({
     retailers: 0,
@@ -15,13 +15,21 @@ const Home = () => {
     states: 0,
   });
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Animasyonlu sayaçlar için
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true);
             startCounting();
           }
         });
