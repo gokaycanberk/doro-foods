@@ -93,9 +93,10 @@ const Home = () => {
             Welcome to <span className="text-green-700">Doro Foods</span>
           </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8">
-            As the exclusive distributor of Nature's Garden, we deliver premium
-            dried fruits, snacks, and mixes to 200+ trusted stores — combining
-            speed, reliability, and retail-focused solutions.
+            Doro Foods is your trusted partner for premium snacks, dried fruits,
+            nuts, and more—offering a curated selection from multiple leading
+            brands. We supply 200+ stores with a diverse portfolio, fast
+            logistics, and tailored retail solutions.
           </p>
           <Link to="/products">
             <button className="mt-4 sm:mt-6 px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white text-base sm:text-lg font-semibold rounded-md shadow-lg hover:bg-green-700 transition transform hover:scale-105 duration-300">
@@ -110,131 +111,75 @@ const Home = () => {
         <div className="absolute left-1/4 bottom-10 w-14 sm:w-20 h-14 sm:h-20 rounded-full bg-red-200 opacity-40 animate-float-slow"></div>
       </section>
 
-      {/* Featured Products Section */}
+      {/* Our Products Section - 7 Categories, circular images, no labels, larger, with description and links */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-2">
-            Featured Products
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800 tracking-tight">
+            Our Products
           </h2>
-          <p className="text-gray-600 text-center mb-8 sm:mb-12 max-w-2xl mx-auto">
-            Discover our most popular items loved by retailers and customers
-            alike
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Product Card 1 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:shadow-xl hover:-translate-y-2">
-              <div className="h-48 sm:h-56 overflow-hidden">
-                <img
-                  src="/images/products/packages.png"
-                  alt="Packaged Products"
-                  className="w-full h-full object-cover object-center"
-                />
-              </div>
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
-                  Packaged Products
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  Premium quality snacks in convenient packages for retail
-                </p>
-                <Link
-                  to="/products"
-                  className="text-green-600 font-medium hover:text-green-700 flex items-center text-sm sm:text-base"
-                >
-                  View Collection
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 sm:h-5 sm:w-5 ml-1"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Product Card 2 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:shadow-xl hover:-translate-y-2">
-              <div className="h-48 sm:h-56 overflow-hidden">
-                <img
-                  src="/images/products/tubs.png"
-                  alt="Tubs Program"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
-                  Tubs Program
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  High-quality snacks in convenient tubs perfect for retail
-                  displays
-                </p>
-                <Link
-                  to="/products"
-                  className="text-green-600 font-medium hover:text-green-700 flex items-center text-sm sm:text-base"
-                >
-                  View Collection
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 sm:h-5 sm:w-5 ml-1"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Product Card 3 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden transform transition duration-300 hover:shadow-xl hover:-translate-y-2">
-              <div className="h-48 sm:h-56 overflow-hidden">
-                <img
-                  src="/images/products/bulk.jpeg"
-                  alt="Bulk Program"
-                  className="w-full h-full object-cover object-[70%_20%]"
-                />
-              </div>
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
-                  Bulk Program
-                </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  Premium bulk options ideal for food service and specialty
-                  retailers
-                </p>
-                <Link
-                  to="/products"
-                  className="text-green-600 font-medium hover:text-green-700 flex items-center text-sm sm:text-base"
-                >
-                  View Collection
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4 sm:h-5 sm:w-5 ml-1"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-y-8 gap-x-6 sm:gap-x-10 justify-items-center">
+            {/* Category 1 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/dried-fruit.png"
+                alt="Dried Fruit"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
+            {/* Category 2 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/nuts.png"
+                alt="Nuts"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
+            {/* Category 3 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/trail-mixes.png"
+                alt="Trail Mixes"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
+            {/* Category 4 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/snacks.png"
+                alt="Snacks"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
+            {/* Category 5 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/candy.png"
+                alt="Candy"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
+            {/* Category 6 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/chocolate-yogurt.png"
+                alt="Chocolate & Yogurt"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
+            {/* Category 7 */}
+            <Link to="/products" className="flex flex-col items-center group">
+              <img
+                src="/images/products/seeds-grains.png"
+                alt="Seeds & Grains"
+                className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
+              />
+            </Link>
           </div>
+          <p className="text-center text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mt-10">
+            Discover 300+ premium-quality products tailored to your business
+            needs — from convenient retail-ready packs to flexible bulk &
+            container solutions.
+          </p>
         </div>
       </section>
 
@@ -303,9 +248,10 @@ const Home = () => {
                 Trusted, Partner-Focused Distributor
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                The sole authorized distributor of Nature's Garden in the
-                region, we collaborate with top retailers to maintain seamless,
-                transparent supply relationships built on trust and reliability.
+                We bring together a wide range of top brands under one roof,
+                providing retailers with seamless access to the best in snacks,
+                dried fruits, nuts, and more. Our focus is on quality, variety,
+                and reliable partnerships.
               </p>
             </div>
 
@@ -319,10 +265,10 @@ const Home = () => {
                 Secure & Timely Distribution Network
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                Our products are delivered straight from the New Jersey
-                production facility, through our central warehouse, ensuring
-                controlled logistics, freshness, and consistent quality—7 days a
-                week.
+                Our products are delivered quickly and safely from our central
+                warehouse, ensuring freshness and consistent quality—7 days a
+                week. We support both retail-ready and bulk solutions for every
+                business need.
               </p>
             </div>
 
@@ -336,9 +282,9 @@ const Home = () => {
                 Strategic Growth Support
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                With a strong presence in NY & NJ, we help supermarkets expand
-                offerings through curated assortments, retail-focused
-                consulting, and responsive fulfillment strategies.
+                With a strong presence in NY & NJ, we help supermarkets and
+                specialty stores grow through curated assortments, multi-brand
+                offerings, and responsive fulfillment strategies.
               </p>
             </div>
           </div>
@@ -361,8 +307,9 @@ const Home = () => {
           </h2>
           <p className="text-lg sm:text-xl max-w-3xl mx-auto mb-8 sm:mb-10 px-4">
             At Doro Foods, we do more than just deliver. We build lasting retail
-            partnerships—bringing fresh, natural products from Nature's Garden
-            directly to store shelves.
+            partnerships—bringing a diverse range of premium brands and products
+            directly to store shelves. Our mission is to empower your business
+            with quality, choice, and reliability.
           </p>
           <Link to="/about">
             <button className="bg-white text-green-800 px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold hover:bg-green-100 transition transform hover:scale-105 duration-300">

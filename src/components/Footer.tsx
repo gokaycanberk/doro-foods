@@ -19,8 +19,10 @@ const Footer = () => {
               className="h-16 brightness-0 invert"
             />
             <p className="text-gray-400 text-sm max-w-xs">
-              The exclusive distributor of Nature's Garden in the NY & NJ
-              region, delivering premium quality and reliability since 2017.
+              Serving businesses across the entire United States with premium
+              brands and products. Our distribution network covers all 50
+              states, with expanded logistics and support in the Tri-State area
+              (NY, NJ, CT).
             </p>
 
             {/* Social Media Icons */}
