@@ -21,7 +21,7 @@ const Footer = () => {
             <p className="text-gray-400 text-sm max-w-xs">
               Serving businesses across the entire United States with premium
               brands and products. Our distribution network covers all 50
-              states, with expanded logistics and support in the Tri-State area
+              states, with expanded logistics and support in the Tri State area
               (NY, NJ, CT).
             </p>
 
