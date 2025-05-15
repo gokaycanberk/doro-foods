@@ -23,6 +23,14 @@ const Header = () => {
     setMenuOpen(!menuOpen);
   };
 
+  const scrollToSection = (id: string) => {
+    setMenuOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -45,44 +53,24 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-8">
-          <Link
-            to="/"
-            className={`text-lg font-medium ${
-              location.pathname === "/" ? "text-green-600" : "text-gray-700"
-            } hover:text-gray-900`}
-          >
-            Home
-          </Link>
-          <Link
-            to="/products"
-            className={`text-lg font-medium ${
-              location.pathname === "/products"
-                ? "text-green-600"
-                : "text-gray-700"
-            } hover:text-gray-900`}
+          <button
+            onClick={() => scrollToSection("product-section")}
+            className={`text-lg font-medium text-gray-700 hover:text-gray-900`}
           >
             Products
-          </Link>
-          <Link
-            to="/about"
-            className={`text-lg font-medium ${
-              location.pathname === "/about"
-                ? "text-green-600"
-                : "text-gray-700"
-            } hover:text-gray-900`}
+          </button>
+          <button
+            onClick={() => scrollToSection("about-section")}
+            className={`text-lg font-medium text-gray-700 hover:text-gray-900`}
           >
             About
-          </Link>
-          <Link
-            to="/contact"
-            className={`text-lg font-medium ${
-              location.pathname === "/contact"
-                ? "text-green-600"
-                : "text-gray-700"
-            } hover:text-gray-900`}
+          </button>
+          <button
+            onClick={() => scrollToSection("contact-section")}
+            className={`text-lg font-medium text-gray-700 hover:text-gray-900`}
           >
             Contact
-          </Link>
+          </button>
         </nav>
 
         {/* Mobile menu button */}
@@ -116,46 +104,30 @@ const Header = () => {
         } pt-20 px-6`}
       >
         <nav className="flex flex-col space-y-6 items-center mt-10">
-          <Link
-            to="/"
-            className={`text-xl font-medium w-full text-center py-3 ${
-              location.pathname === "/"
-                ? "text-green-600 bg-green-50 rounded-md"
-                : "text-gray-800"
-            }`}
+          <button
+            onClick={() => scrollToSection("home")}
+            className="text-xl font-medium w-full text-center py-3 text-gray-800"
           >
             Home
-          </Link>
-          <Link
-            to="/products"
-            className={`text-xl font-medium w-full text-center py-3 ${
-              location.pathname === "/products"
-                ? "text-green-600 bg-green-50 rounded-md"
-                : "text-gray-800"
-            }`}
+          </button>
+          <button
+            onClick={() => scrollToSection("product-section")}
+            className="text-xl font-medium w-full text-center py-3 text-gray-800"
           >
             Products
-          </Link>
-          <Link
-            to="/about"
-            className={`text-xl font-medium w-full text-center py-3 ${
-              location.pathname === "/about"
-                ? "text-green-600 bg-green-50 rounded-md"
-                : "text-gray-800"
-            }`}
+          </button>
+          <button
+            onClick={() => scrollToSection("about-section")}
+            className="text-xl font-medium w-full text-center py-3 text-gray-800"
           >
             About
-          </Link>
-          <Link
-            to="/contact"
-            className={`text-xl font-medium w-full text-center py-3 ${
-              location.pathname === "/contact"
-                ? "text-green-600 bg-green-50 rounded-md"
-                : "text-gray-800"
-            }`}
+          </button>
+          <button
+            onClick={() => scrollToSection("contact-section")}
+            className="text-xl font-medium w-full text-center py-3 text-gray-800"
           >
             Contact
-          </Link>
+          </button>
         </nav>
 
         <div className="mt-auto mb-10 text-center">

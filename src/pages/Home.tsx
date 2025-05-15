@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import Brands from "../components/Brands";
+
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -98,11 +99,17 @@ const Home = () => {
             brands. We supply 200+ stores with a diverse portfolio, fast
             logistics, and tailored retail solutions.
           </p>
-          <Link to="/products">
-            <button className="mt-4 sm:mt-6 px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white text-base sm:text-lg font-semibold rounded-md shadow-lg hover:bg-green-700 transition transform hover:scale-105 duration-300">
-              Explore Our Products
-            </button>
-          </Link>
+          <button
+            onClick={() => {
+              const productSection = document.getElementById("product-section");
+              if (productSection) {
+                productSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="mt-4 sm:mt-6 px-6 sm:px-8 py-3 sm:py-4 bg-green-600 text-white text-base sm:text-lg font-semibold rounded-md shadow-lg hover:bg-green-700 transition transform hover:scale-105 duration-300"
+          >
+            Explore Our Products
+          </button>
         </div>
 
         {/* Floating Elements */}
@@ -115,82 +122,151 @@ const Home = () => {
       <section className="py-12 sm:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800 tracking-tight">
-            Our Products
+            Our Product Categories
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-y-8 gap-x-6 sm:gap-x-10 justify-items-center">
             {/* Category 1 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/dried-fruit.png"
                 alt="Dried Fruit"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
             {/* Category 2 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/nuts.png"
                 alt="Nuts"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
             {/* Category 3 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/trail-mixes.png"
                 alt="Trail Mixes"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
             {/* Category 4 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/snacks.png"
                 alt="Snacks"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
             {/* Category 5 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/candy.png"
                 alt="Candy"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
             {/* Category 6 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/chocolate-yogurt.png"
                 alt="Chocolate & Yogurt"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
             {/* Category 7 */}
-            <Link to="/products" className="flex flex-col items-center group">
+            <div className="flex flex-col items-center group">
               <img
                 src="/images/products/seeds-grains.png"
                 alt="Seeds & Grains"
                 className="w-28 h-28 sm:w-40 sm:h-40 object-cover rounded-full shadow-sm transition-transform duration-200 group-hover:scale-105"
               />
-            </Link>
+            </div>
           </div>
-          <p className="text-center text-gray-600 text-base sm:text-lg max-w-2xl mx-auto mt-10">
-            Discover 300+ premium-quality products tailored to your business
-            needs — from convenient retail-ready packs to flexible bulk &
-            container solutions.
+        </div>
+      </section>
+
+      {/* Products Showcase Section */}
+      <section id="product-section" className="py-12 sm:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 text-gray-800">
+            What We Distribute
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-10 text-center">
+            We are distributing extensive range of premium food products,
+            available in various packaging options to meet your business needs.
           </p>
+
+          {/* 3-Panel Display: Bulk, Package, Tubs */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-0 mb-12">
+            {/* Bulk Card */}
+            <div className="relative group overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl w-full shadow-md">
+              <div className="aspect-[3/4] relative">
+                <img
+                  src="/images/products/ads1-min.jpeg"
+                  alt="Bulk Program"
+                  className="w-full h-full object-cover scale-100 transition-transform duration-700 filter brightness-[0.95] contrast-[1.05] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2 drop-shadow-lg">
+                    Bulk Program
+                  </h2>
+                  <p className="text-sm sm:text-base text-white/95 drop-shadow-md">
+                    Ideal for food service and specialty retailers
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Package Card */}
+            <div className="relative group overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl w-full shadow-md">
+              <div className="aspect-[3/4] relative">
+                <img
+                  src="/images/products/packaged.jpeg"
+                  alt="Package Products"
+                  className="w-full h-full object-cover scale-100 transition-transform duration-700 filter brightness-[0.97] contrast-[1.03] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2 drop-shadow-lg">
+                    Packaged Products
+                  </h2>
+                  <p className="text-sm sm:text-base text-white/95 drop-shadow-md">
+                    Best quality snacks in convenient packages
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Tubs Card */}
+            <div className="relative group overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl w-full shadow-md">
+              <div className="aspect-[3/4] relative">
+                <img
+                  src="/images/products/tubscropped.jpg"
+                  alt="Tubs Program"
+                  className="w-full h-full object-cover scale-100 transition-transform duration-700 filter brightness-[0.95] contrast-[1.05] group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent flex flex-col justify-end p-4 sm:p-6">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2 drop-shadow-lg">
+                    Tubs Program
+                  </h2>
+                  <p className="text-sm sm:text-base text-white/95 drop-shadow-md">
+                    Perfect for retail and self-service displays
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Animated Stats Section */}
       <section
+        id="about-section"
         ref={statsRef}
         className="py-12 sm:py-20 bg-green-700 text-white"
       >
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10 sm:mb-16">
-            Our Impact by the Numbers
+            About Doro Foods by the Numbers
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 text-center">
@@ -282,9 +358,9 @@ const Home = () => {
                 Strategic Growth Support
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                With a strong presence in NY & NJ, we help supermarkets and
-                specialty stores grow through curated assortments, multi-brand
-                offerings, and responsive fulfillment strategies.
+                With a strong presence in Tri-State Area, we help supermarkets 
+                and specialty stores grow through curated assortments,
+                multi-brand offerings, and responsive fulfillment strategies.
               </p>
             </div>
           </div>
@@ -311,11 +387,6 @@ const Home = () => {
             directly to store shelves. Our mission is to empower your business
             with quality, choice, and reliability.
           </p>
-          <Link to="/about">
-            <button className="bg-white text-green-800 px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-semibold hover:bg-green-100 transition transform hover:scale-105 duration-300">
-              Learn About Our Mission
-            </button>
-          </Link>
         </div>
       </section>
 
@@ -391,16 +462,252 @@ const Home = () => {
             Foods difference
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact">
-              <button className="w-full sm:w-auto bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold hover:bg-green-800 transition mb-4 sm:mb-0">
-                Contact Our Team
-              </button>
-            </Link>
-            <Link to="/products">
-              <button className="w-full sm:w-auto bg-white text-green-700 border-2 border-green-700 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold hover:bg-green-50 transition">
-                Browse Products
-              </button>
-            </Link>
+            <button
+              onClick={() => {
+                const contactSection =
+                  document.getElementById("contact-section");
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="w-full sm:w-auto bg-green-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold hover:bg-green-800 transition mb-4 sm:mb-0"
+            >
+              Contact Our Team
+            </button>
+            <button
+              onClick={() => {
+                const productSection =
+                  document.getElementById("product-section");
+                if (productSection) {
+                  productSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+              className="w-full sm:w-auto bg-white text-green-700 border-2 border-green-700 px-6 sm:px-8 py-3 sm:py-4 rounded-md font-semibold hover:bg-green-50 transition"
+            >
+              Browse Products
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact-section" className="py-16 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
+              Contact Us
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+              Let's connect! Whether you have questions about our products or
+              want to discuss partnership opportunities, we're here to help.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+              {/* Left Side - Contact Info */}
+              <div className="space-y-10">
+                <div className="animate-fade-in">
+                  <h3 className="text-2xl font-bold mb-6 text-gray-800">
+                    Get in Touch
+                  </h3>
+                  <p className="text-gray-600 mb-8 leading-relaxed">
+                    Whether you're a supermarket manager, retail buyer, or
+                    distributor, we're here to help. Reach out for exclusive
+                    pricing, product catalogs, and tailored wholesale solutions.
+                  </p>
+
+                  <div className="space-y-6 text-gray-700">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 text-green-700"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Address</p>
+                        <p>2 Main St, Ridgefield Park, NJ 07660</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 text-green-700"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Phone</p>
+                        <a
+                          href="tel:+13475924494"
+                          className="text-green-600 hover:text-green-700 transition"
+                        >
+                          +1 (347) 592-4494
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5 text-green-700"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="font-semibold">Email</p>
+                        <a
+                          href="mailto:info@dorofoods.com"
+                          className="text-green-600 hover:text-green-700 transition"
+                        >
+                          info@dorofoods.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side - Simple Contact Form */}
+              <div className="bg-white rounded-xl shadow-md p-6 sm:p-8 animate-fade-in">
+                <h3 className="text-xl sm:text-2xl font-bold mb-6 text-gray-800">
+                  Send a Message
+                </h3>
+                <form className="space-y-4 sm:space-y-6">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Full Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      placeholder="John Doe"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Email <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        placeholder="john@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        placeholder="(123) 456-7890"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Company <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      required
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      placeholder="Your Company"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
+                      Message <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={4}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      placeholder="How can we help you?"
+                    ></textarea>
+                  </div>
+
+                  <div>
+                    <button
+                      type="submit"
+                      className="w-full py-3 px-6 text-white rounded-md font-medium text-base transition bg-green-600 hover:bg-green-700"
+                    >
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </section>

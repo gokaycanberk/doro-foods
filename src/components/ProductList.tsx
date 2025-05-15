@@ -657,17 +657,6 @@ const ProductList = () => {
   if (!selectedView) {
     return (
       <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-10">
-        {/* Kayar Yazı */}
-        <div className="text-center mb-10 sm:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4">
-            EXPLORE FULL COLLECTION
-          </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-            Browse all our bold and delicious products, ready to fuel your next
-            adventure. Discover your favorite today!
-          </p>
-        </div>
-
         {/* Program Kartları */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-0">
           {/* Package Card */}
@@ -683,7 +672,7 @@ const ProductList = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4 sm:p-6">
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">
-                  Packaged Products
+                  Package Products
                 </h2>
                 <p className="text-sm sm:text-base text-white/90">
                   Best quality snacks in convenient packages
@@ -721,7 +710,7 @@ const ProductList = () => {
           >
             <div className="aspect-[3/4] relative">
               <img
-                src="/images/products/bulk.jpeg"
+                src="/images/products/ads1-min.jpeg"
                 alt="Bulk Program"
                 className="w-full h-full object-cover object-[70%_20%] scale-125 transition-transform duration-500 group-hover:scale-130"
               />

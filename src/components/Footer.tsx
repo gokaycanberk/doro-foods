@@ -20,9 +20,8 @@ const Footer = () => {
             />
             <p className="text-gray-400 text-sm max-w-xs">
               Serving businesses across the entire United States with premium
-              brands and products. Our distribution network covers all 50
-              states, with expanded logistics and support in the Tri State area
-              (NY, NJ, CT).
+              brands and products. Our direct store distribution with logistics
+              and support covers in the Tri State Area (NY, NJ, CT).
             </p>
 
             {/* Social Media Icons */}
@@ -177,7 +176,7 @@ const Footer = () => {
                   ></path>
                 </svg>
                 <p>
-                  2 Main Street
+                  2 Main Street Unit B
                   <br />
                   Ridgefield Park, NJ 07660
                 </p>
