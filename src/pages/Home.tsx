@@ -59,7 +59,7 @@ const Home = () => {
       retailers: 200,
       products: 250,
       years: 8,
-      states: 2,
+      states: 3,
     };
 
     let step = 0;
@@ -358,7 +358,7 @@ const Home = () => {
                 Strategic Growth Support
               </h3>
               <p className="text-sm sm:text-base text-gray-600">
-                With a strong presence in Tri-State Area, we help supermarkets 
+                With a strong presence in Tri-State Area, we help supermarkets
                 and specialty stores grow through curated assortments,
                 multi-brand offerings, and responsive fulfillment strategies.
               </p>

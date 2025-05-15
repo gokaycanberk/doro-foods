@@ -33,7 +33,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
@@ -42,35 +42,47 @@ const Header = () => {
         <div className="transition-all duration-300">
           <Link to="/">
             <img
-              src="/images/DORO-01.png"
+              src={scrolled ? "/images/DORO-01.png" : "/images/DORO-01.png"}
               alt="Doro Foods Logo"
               className={`transition-all duration-300 ${
-                scrolled ? "h-10" : "h-16"
+                scrolled ? "h-10 filter-none" : "h-16 brightness-[1.15]"
               }`}
             />
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8">
-          <button
-            onClick={() => scrollToSection("product-section")}
-            className={`text-lg font-medium text-gray-700 hover:text-gray-900`}
+        <nav className="hidden md:flex space-x-10">
+          <Link
+            to="/products"
+            className={`text-lg font-medium transition-colors duration-300 ${
+              scrolled
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
           >
             Products
-          </button>
-          <button
-            onClick={() => scrollToSection("about-section")}
-            className={`text-lg font-medium text-gray-700 hover:text-gray-900`}
+          </Link>
+          <Link
+            to="/about"
+            className={`text-lg font-medium transition-colors duration-300 ${
+              scrolled
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
           >
             About
-          </button>
-          <button
-            onClick={() => scrollToSection("contact-section")}
-            className={`text-lg font-medium text-gray-700 hover:text-gray-900`}
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-lg font-medium transition-colors duration-300 ${
+              scrolled
+                ? "text-gray-700 hover:text-gray-900"
+                : "text-white hover:text-gray-200"
+            }`}
           >
             Contact
-          </button>
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -80,19 +92,19 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-all duration-300 ease-out ${
-              menuOpen ? "rotate-45 translate-y-1" : "-translate-y-1"
-            }`}
+            className={`block w-5 h-0.5 transition-all duration-300 ease-out ${
+              scrolled ? "bg-gray-800" : "bg-white"
+            } ${menuOpen ? "rotate-45 translate-y-1" : "-translate-y-1"}`}
           ></span>
           <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-all duration-300 ease-out ${
-              menuOpen ? "opacity-0" : "opacity-100"
-            }`}
+            className={`block w-5 h-0.5 transition-all duration-300 ease-out ${
+              scrolled ? "bg-gray-800" : "bg-white"
+            } ${menuOpen ? "opacity-0" : "opacity-100"}`}
           ></span>
           <span
-            className={`block w-5 h-0.5 bg-gray-800 transition-all duration-300 ease-out ${
-              menuOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"
-            }`}
+            className={`block w-5 h-0.5 transition-all duration-300 ease-out ${
+              scrolled ? "bg-gray-800" : "bg-white"
+            } ${menuOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"}`}
           ></span>
         </button>
       </div>
@@ -104,30 +116,34 @@ const Header = () => {
         } pt-20 px-6`}
       >
         <nav className="flex flex-col space-y-6 items-center mt-10">
-          <button
-            onClick={() => scrollToSection("home")}
+          <Link
+            to="/"
             className="text-xl font-medium w-full text-center py-3 text-gray-800"
+            onClick={() => setMenuOpen(false)}
           >
             Home
-          </button>
-          <button
-            onClick={() => scrollToSection("product-section")}
+          </Link>
+          <Link
+            to="/products"
             className="text-xl font-medium w-full text-center py-3 text-gray-800"
+            onClick={() => setMenuOpen(false)}
           >
             Products
-          </button>
-          <button
-            onClick={() => scrollToSection("about-section")}
+          </Link>
+          <Link
+            to="/about"
             className="text-xl font-medium w-full text-center py-3 text-gray-800"
+            onClick={() => setMenuOpen(false)}
           >
             About
-          </button>
-          <button
-            onClick={() => scrollToSection("contact-section")}
+          </Link>
+          <Link
+            to="/contact"
             className="text-xl font-medium w-full text-center py-3 text-gray-800"
+            onClick={() => setMenuOpen(false)}
           >
             Contact
-          </button>
+          </Link>
         </nav>
 
         <div className="mt-auto mb-10 text-center">

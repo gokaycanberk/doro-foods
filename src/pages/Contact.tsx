@@ -134,7 +134,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold">Address</p>
-                      <p>2 Main St, Ridgefield Park, NJ 07660</p>
+                      <p>2 Main St Unit B, Ridgefield Park, NJ 07660</p>
                     </div>
                   </div>
 
